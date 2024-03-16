@@ -4,9 +4,9 @@
 
 This repository contains, besides the python application itself, two directories:
    
-   1. The [Questions]() directory where you can find the [Questions.txt]() file inside of which I answered the 10 theoretical questions.
+   1. The [Questions](https://github.com/RadAntonio/YonderDevOpsTesr/tree/main/Questions) directory where you can find the [Questions.txt](https://github.com/RadAntonio/YonderDevOpsTesr/blob/main/Questions/Questions.txt) file inside of which I answered the 10 theoretical questions.
    
-   2. The [Reports]() directory where I stored the reports of the 3 operations defined in the requirements.
+   2. The [Reports](https://github.com/RadAntonio/YonderDevOpsTesr/tree/main/reports) directory where I stored the reports of the 3 operations defined in the requirements.
 
 ## Preview
 
@@ -26,6 +26,10 @@ This repository contains, besides the python application itself, two directories
 1. Clone the repository:
    ```bash
    git clone https://github.com/RadAntonio/YonderDevOpsTesr.git
+   ```
+2. Enter the repository
+   ```bash
+   cd YonderDevOpsTesr
    ```
 2. After you installed Docker for your machine open the terminal and pull the container:
    ```bash
