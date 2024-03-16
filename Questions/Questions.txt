@@ -1,0 +1,64 @@
+Question 1:
+    Exemplify two data structures that you know and describe some situations where you would use them.
+Answer 1:
+    Two data structures: Arrays and HashMaps.
+    Situations for Arrays: Store the indices of the problems that I solved on LeetCode.
+                           Store my grades from one semester.
+    Situations for HashMaps: In key I could store my piece of clothing and in value I could store how many pieces i have
+                             In key I could store the students name and in value his grade.
+                             
+Question 2:
+    You open a web browser and access http://www.tss-yonder.com. What is the IP address behind this website and how does the browser know how to get the correct IP?    
+Answer 2:
+    1. I enter http://www.tss-yonder.com in a webBrowser.
+    2. The browser looks up for the ip address for the domain name using DNS.
+    3. The browser sends an http request to the server.
+    4. The server sends back an http response.
+    5. The browser begins rendering the HTML.
+
+Question 3: 
+    Exemplify two transport protocols and think of two applications that would use each of them.
+Answer 3:
+    Two transport protocols could be TCP and UDP.
+    TCP: When I browse the web to go on  http://www.tss-yonder.com page. (HTTP).
+    UDP: When I want to talk to my friends on discord. (Voice over Internet Protocol (VoIP)).
+
+Question 4:
+    You wrote a chat web application in your favorite programming language. You need to host this somewhere and run it so that the entire world can start using it. Describe how you would do that and the tools you would use.
+Answer 4:
+    Firstly I would think and choose my **Hosting Povider** then I would set up the **Infrastructure**. After the first 2 steps are complete i would **Deploy** my chat web application and configure **Security**.
+
+Question 5:
+    Now your application is famous but unfortunately it has a lot of bugs. You want only you and a couple of your friends to be able to access it until you patch it. Describe two ways you can achieve this.
+Answer 5:
+    The answer is IP Whitelisting. I would configure my server to accept only specific IP address (me and my friends).
+
+Question 6:
+    Your application is ready for the public once again. You realize that you forgot about security and any network administrator can see the messages that a user sends or receives. 
+    How would you improve your application to prevent this? Is there any way to do this so that not even the application owner (you) can see the messages between two random users?
+Answer 6:
+    This problem could be solved by implementing end to end encryption.
+
+Question 7:
+    What are cookies and what are they used for? Find a cookie used by http://www.tss-yonder.com and copy its name and value. What do you think is its purpose?
+Answer 7: 
+    Cookies are small pieces of data stored on a users computer by their web browser. 
+    Cookie name: PHPSESSID
+    Cookie value: cplb4c2i7p4guo70l0d086vvn3
+
+Question 8: 
+    While writing your application you need to create more worker processes for processing some data. How can you create child processes in your favorite language? What are the possible states of a process?
+Answer 8:
+    In python i can create the desired child processes by importing multiprcessing, and the possible states are Running, Ready, Suspended, Terminated.
+
+Question 9:
+    Your application is running but it still has a few problems. Occasionally, it returns an error page. How can you find the PID of your application? What would you do to debug it?
+Answer 9:
+    For example in python i could get the PID of my current process using **os.getpid()** as for what I would do to debug it I am thinking of checking the Error Logs.
+
+Question 10:
+    What DBMS would you use to store your application data and why? How would you store the passwords of each user?
+Answer 10:
+    I would choose a NoSQL database because it provides flexibility and sclability.
+    The passwords would ne stored using a cryptographic hashing algorithm.
+
