@@ -8,6 +8,7 @@ class ApiHelper:
     def __init__(self, url):
         self._url = url
         self._drivers_licenses = []
+        self._categories = {}
 
     def fetch_data(self):
         try:
@@ -25,6 +26,8 @@ class ApiHelper:
                         item['suspendat'],
                     )
                     self._drivers_licenses.append(drivers_license)
+                    if not self._categories.get(item['categorie']):
+                        self._categories[item['categorie']] = item['categorie']
             else:
                 raise Exception('Failed to fetch data')
         except Exception as child:
@@ -45,3 +48,11 @@ class ApiHelper:
     @drivers_licenses.setter
     def drivers_licenses(self, drivers_licenses):
         self._drivers_licenses = drivers_licenses
+
+    @property
+    def categories(self):
+        return self._categories
+
+    @categories.setter
+    def categories(self,categories):
+        self._categories = categories

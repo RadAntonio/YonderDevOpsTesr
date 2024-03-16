@@ -6,11 +6,14 @@ class Main:
         self._view = View()
 
     def run(self):
-        self._view.print_suspended_licenses()
-        self._view.print_valid_licenses()
-        self._view.print_licenses_by_category()
-
+        while True:
+            self._view.display_menu()
+            option = input("Enter your choice: ")
+            self._view.execute_function(option)
+            if option == "0":
+                break
 
 if __name__ == "__main__":
     Main().run()
+
         

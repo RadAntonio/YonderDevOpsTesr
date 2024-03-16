@@ -20,7 +20,7 @@ class Controller:
         valid_licenses = []
         current_date = datetime.date.today()
         for license in self._api_helper.drivers_licenses:
-            if datetime.datetime.strptime(license.dataDeExpirare, "%d/%m/%Y").date() >= current_date:
+            if datetime.datetime.strptime(license.dataDeEmitere, "%d/%m/%Y").date() < current_date:
                 valid_licenses.append(license)
         self._file_helper.write_to_excel_valid_licenses(valid_licenses)
         return valid_licenses
@@ -28,9 +28,14 @@ class Controller:
     def count_lincese_by_category(self, category_name):
         count = 0
         licenses_with_given_id = []
-        for license in self._api_helper.drivers_licenses:
-            if license.categorie == category_name:
-                count += 1
-                licenses_with_given_id.append(license)
-        self._file_helper.write_to_excel_by_category_licenses(licenses_with_given_id)
-        return count
+        try:
+            if category_name not in self._api_helper.categories:
+                raise Exception("No such category. Previous data from generated report has not been modified!")
+            for license in self._api_helper.drivers_licenses:
+                if license.categorie == category_name:
+                    count += 1
+                    licenses_with_given_id.append(license)
+            self._file_helper.write_to_excel_by_category_licenses(licenses_with_given_id)
+            return count
+        except Exception as e:
+            raise e

@@ -5,7 +5,7 @@ import os
 class FileHelper:
 
     def __init__(self):
-        self._output_folder = "reports"
+        self._output_folder = "Reports"
 
     def write_to_excel_suspended_licenses(self, licenses):
         wb = Workbook()
